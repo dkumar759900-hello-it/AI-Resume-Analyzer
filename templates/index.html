@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Resume Analyzer</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #66ea7e, #66a0b9);
+        }
+
+        .box {
+            background: white;
+            padding: 50px;
+            border-radius: 25px;
+            text-align: center;
+            width: 550px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            text-align: left;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            resize: vertical;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        input[type=file] {
+            margin: 20px 0;
+            padding: 12px;
+            width: 100%;
+            border: 2px dashed #66a0b9;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #46e576;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #37d14b;
+            transform: translateY(-2px);
+        }
+
+        .features {
+            margin-top: 30px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .features p {
+            margin: 8px 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>🤖 AI Resume Analyzer</h1>
+
+        <p class="subtitle">
+            Upload your resume and get AI-powered ATS analysis instantly
+        </p>
+
+        <form action="/analyze" method="POST" enctype="multipart/form-data">
+
+            <h3>📋 Job Description</h3>
+
+            <textarea name="job_description" placeholder="Paste the Job Description here for accurate ATS matching..."
+                rows="8"></textarea>
+
+            <br><br>
+
+            <input type="file" name="resume" required>
+
+            <br><br>
+
+            <button type="submit">
+                Analyze Resume
+            </button>
+
+        </form>
+
+        <div class="features">
+            <p>📊 ATS Score</p>
+            <p>💪 Strengths Analysis</p>
+            <p>⚠️ Weakness Detection</p>
+            <p>🚀 Improvement Suggestions</p>
+            <p>🎯 Job Description Matching</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
